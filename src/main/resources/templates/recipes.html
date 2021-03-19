@@ -60,12 +60,18 @@
             </div>
         </div>
         <!-- TODO ova e delot kade sto gi pokazuva brojkite na stranite -->
-        <div th:if="${recipePage.totalPages > 0}" class="pagination"
-             th:each="pageNumber : ${pageNumbers}">
-            <a th:href="@{/recipes(size=${recipePage.size}, page=${pageNumber},
+        <h2>Страни:</h2>
+        <div style="text-align: -webkit-center;">
+            <div th:if="${recipePage.totalPages > 0}" class="pagination"
+                 th:each="pageNumber : ${pageNumbers}">
+
+                <a th:href="@{/recipes(size=${recipePage.size}, page=${pageNumber},
                                     recipeName=${recipeName}, categoryId=${categoryId})}"
-               th:text=${pageNumber}
-               th:class="${pageNumber==recipePage.number + 1} ? active"></a>
+                   th:text=${pageNumber}
+                   th:class="${pageNumber==recipePage.number + 1} ? active"
+                   th:style="'color: white;font-size: xx-large;'"></a>
+
+            </div>
         </div>
 
         <a sec:authorize="isAuthenticated()" href="/add-new-recipe" th:method="GET" style="color: inherit">
