@@ -46,7 +46,7 @@ public class RecipeManipulationController {
                                  @RequestParam(required = false) Long categoryId,
                                  Model model){
         int currentPage = page.orElse(1);
-        int pageSize = size.orElse(9);
+        int pageSize = size.orElse(6);
         Page<Recipe> recipePage;
         int totalPages;
 
