@@ -17,6 +17,16 @@ public class Category {
 
     private String description;
 
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", recipes=" + recipes +
+                '}';
+    }
+
     @OneToMany(mappedBy = "category", cascade = {CascadeType.REMOVE, CascadeType.PERSIST, CascadeType.MERGE})
     private List<Recipe> recipes;
 
