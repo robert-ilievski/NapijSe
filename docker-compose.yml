@@ -32,5 +32,5 @@ services:
   prometheus:
     image: prom/prometheus
     ports:
-      - 9000:9090
+      - 9090:9090
     command: --web.enable-lifecycle  --config.file=/etc/prometheus/prometheus.yml
