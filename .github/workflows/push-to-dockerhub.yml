@@ -41,7 +41,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Build Docker Image
-        run: docker build . --tag rilievsk/napijse-devops:latest
+        run: docker build . -f ${WORKSPACE}/Dockerfile --tag rilievsk/napijse-devops:latest
       -
         name: Docker Push Image
         run: docker push rilievsk/napijse-devops
