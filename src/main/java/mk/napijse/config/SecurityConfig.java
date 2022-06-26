@@ -53,7 +53,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers("/","/h2" ,"/home", "/recipes", "/register", "/register/verify",
                         "/recipes/info/**", "/recipes/search", "/about-us", "/**/recipes", "/password/change",
-                        "/forgot-password", "/password/request", "/facebook", "/facebook/**", "/signin/facebook").permitAll()
+                        "/forgot-password", "/password/request", "/facebook", "/facebook/**", "/signin/facebook",
+                        "/prometheus", "/**/prometheus").permitAll()
                 .antMatchers("/event").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
