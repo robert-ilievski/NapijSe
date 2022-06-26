@@ -1,5 +1,5 @@
 groups:
-  - name: AppAlerts
+  - name: NapijSeAlerts
     rules:
       - alert: InstanceDown
         expr: up{job="services"} < 1
