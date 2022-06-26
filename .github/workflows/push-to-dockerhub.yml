@@ -1,4 +1,4 @@
-name: Lint, Docker Build and Push to DockerHub
+name: Checkout, Docker Build and Push to DockerHub
 
 on:
   push:
