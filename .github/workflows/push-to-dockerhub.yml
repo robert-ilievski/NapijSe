@@ -9,7 +9,6 @@ on:
 jobs:
   docker:
     name: Login, build and push to dockerhub
-    needs: linter
     runs-on: ubuntu-latest
     steps:
       -
